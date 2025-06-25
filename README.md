@@ -21,16 +21,19 @@ cd dotfiles-gui
 ```
 When the installation is complete, you must log out of the session.
 
-> [!Important]  
-> To install the required packages, you will need root privileges. It will install also the required dependencies.   
+> [!Important]
+> To install the required packages, you will need root privileges. It will install also the required dependencies.
 > However, you can still do some customizations without modifying the system. Just select the "no" option when prompted.
 
 ![Screenshot](preview/apps.png)
 
 
 ## Additional adjustments
+(You may want to set this before running `go.sh`)
 
-- If you use a language different from English or Spanish, modify [the `IMGDIR` variable](desktop_setup.sh#L87).
-- If your system has a dedicated GPU, you may want to take a look at the [Conky configuration](conky/panel/conkyrc.conf#160).
-- Similarly, modify Conky according to the [model](conky/panel/conkyrc.conf#143) and [number of cores](conky/panel/conkyrc.conf#149) of your CPU.
-- To customize the shell prompt and VSCode look and feel, visit my other repo https://github.com/RaulMurillo/dotfiles.
+- If you use a language different from English or Spanish, modify [the `IMGDIR` variable](desktop_setup.sh#L88).
+- If your system has a dedicated GPU, you may want to take a look at the [Conky configuration](conky/panel/conkyrc.conf#L160).
+- Similarly, modify Conky according to the [model](conky/panel/conkyrc.conf#L142) and [number of cores](conky/panel/conkyrc.conf#L149) of your CPU.
+- Customize the apps in your [dock](plank_setup.sh#L31).
+
+Additionally, to customize the shell prompt and VSCode look and feel, visit my other repo https://github.com/RaulMurillo/dotfiles.

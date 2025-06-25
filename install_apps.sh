@@ -18,7 +18,8 @@ if [ "$SUDO_VAR" != "yes" ]; then
 fi
 
 sudo apt update
-sudo apt install -y software-properties-common apt-transport-https curl wget ca-certificates
+
+# Basic apps and utilities
 sudo apt install -y git htop vim neofetch unzip screen tmux
 
 # Meld - Visual diff and merge tool
@@ -26,6 +27,7 @@ sudo apt install -y meld
 
 # Caffeine - Prevent desktop idleness in full-screen mode
 sudo apt install -y caffeine
+
 ## Set icon as autostart app
 echo '[Desktop Entry]
 Type=Application
@@ -56,7 +58,7 @@ sudo apt install -y ./Spotube-linux-x86_64.deb
 rm ./Spotube-linux-x86_64.deb
 
 # Obsidian - Note-taking app that operates on Markdown files.
-VERSION=1.5.8
+VERSION=1.8.10 # Update this to the latest version if needed, or use Snap or Flatpak instead
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v${VERSION}/obsidian_${VERSION}_amd64.deb
 sudo apt install -y ./obsidian_${VERSION}_amd64.deb
 rm ./obsidian_${VERSION}_amd64.deb

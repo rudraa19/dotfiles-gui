@@ -10,7 +10,7 @@ fi
 # Extract the value of the NAME field from /etc/os-release
 OS_NAME=$(grep "^NAME=" /etc/os-release | cut -d "=" -f 2- | tr -d '"')
 if [ "$OS_NAME" != "Linux Mint" ] && [ "$XDG_CURRENT_DESKTOP" != "cinnamon" ]; then
-    echo "This script onky works in Linux Mint Cinnamon systems"
+    echo "This script only works in Linux Mint Cinnamon systems"
     exit 1
 fi
 
@@ -29,7 +29,7 @@ gsettings set org.cinnamon panels-enabled "['1:0:top']"
 gsettings set org.cinnamon panels-height "['1:30']"
 # https://forums.linuxmint.com/viewtopic.php?t=285940
 
-## Install favourite applets ===================================================
+## Install favorite applets ===================================================
 cd ~/.local/share/cinnamon/applets/
 wget https://cinnamon-spices.linuxmint.com/files/applets/CinnVIIStarkMenu@NikoKrause.zip && unzip CinnVIIStarkMenu@NikoKrause.zip && rm CinnVIIStarkMenu@NikoKrause.zip
 wget https://cinnamon-spices.linuxmint.com/files/applets/weather@mockturtl.zip && unzip weather@mockturtl.zip && rm weather@mockturtl.zip
@@ -72,7 +72,7 @@ sed -i 's/value": "visual/value": "buttons/g' ~/.config/cinnamon/spices/workspac
 sed -i 's/value": "stark/value": "mate/g' ~/.config/cinnamon/spices/CinnVIIStarkMenu@NikoKrause/*.json
 
 
-# Install favourite extensions =================================================
+# Install favorite extensions =================================================
 cd ~/.local/share/cinnamon/extensions/
 
 wget https://cinnamon-spices.linuxmint.com/files/extensions/transparent-panels@germanfr.zip && unzip transparent-panels@germanfr.zip && rm transparent-panels@germanfr.zip

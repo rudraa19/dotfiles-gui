@@ -28,15 +28,11 @@ dconf write /net/launchpad/plank/docks/dock1/zoom-enabled "true"
 rm $HOME/.config/plank/dock1/launchers/*.dockitem
 
 # The order the apps will be shown
+# Customize this with your preferred applications
 DOCKAPPS="org.gnome.Calendar \
-microsoft-edge \
 firefox \
 nemo \
-obsidian \
-org.gnome.meld \
 org.gnome.Terminal \
-code \
-spotube \
 "
 DOCKITEMS="["
 for item in $DOCKAPPS; do
