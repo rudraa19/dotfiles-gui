@@ -50,7 +50,7 @@ sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/micros
 ## Install
 sudo rm microsoft.gpg
 sudo apt update
-sudo apt install -y microsoft-edge-stable code
+sudo apt install -y code
 
 # Spotube - Spotify open-source alternative
 wget https://github.com/KRTirtho/spotube/releases/latest/download/Spotube-linux-x86_64.deb
